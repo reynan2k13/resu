@@ -1,0 +1,468 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 1, ../sass/_layout.scss */
+body {
+  background-color: azure;
+}
+/* line 4, ../sass/_layout.scss */
+body .br2x {
+  margin: 4.5em 0;
+  /* FF for instance */
+  line-height: 5em;
+  /* chrome for instance */
+}
+/* line 8, ../sass/_layout.scss */
+body .size1 {
+  height: 50px;
+  width: 50px;
+  padding: 5px;
+  border-radius: 50px;
+  animation: myfirst 3s;
+  -moz-animation: myfirst 3s infinite;
+  /* Firefox */
+  -webkit-animation: myfirst 3s infinite;
+  /* Safari and Chrome */
+}
+@-webkit-keyframes myfirst /* Firefox */ {
+  0% {
+    box-shadow: 2px 2px 2px white;
+  }
+  25% {
+    box-shadow: 4px 4px 4px white;
+  }
+  50% {
+    box-shadow: 6px 6px 6px white;
+  }
+  75% {
+    box-shadow: 4px 4px 4px white;
+  }
+  110% {
+    box-shadow: 2px 2px 2px white;
+  }
+}
+/* line 33, ../sass/_layout.scss */
+.navbar > .container .navbar-brand {
+  padding: 0;
+}
+
+/* line 37, ../sass/_layout.scss */
+.navbar.navbar-inverse {
+  background-color: #000000;
+  border-color: #080808;
+}
+
+/* line 43, ../sass/_layout.scss */
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+
+/* line 54, ../sass/_layout.scss */
+#book {
+  background-color: white;
+  position: relative;
+  width: 830px;
+  height: 260px;
+  left: 50%;
+  top: 50%;
+  margin-left: -400px;
+  margin-top: -125px;
+}
+
+/* line 65, ../sass/_layout.scss */
+#pages section {
+  background-color: white;
+  display: block;
+  width: 400px;
+  height: 250px;
+  position: absolute;
+  left: 415px;
+  top: 5px;
+  overflow: hidden;
+}
+
+/* line 75, ../sass/_layout.scss */
+#pages section > div {
+  display: block;
+  width: 400px;
+  height: 250px;
+  font-size: 12px;
+}
+
+/* line 81, ../sass/_layout.scss */
+#pages section p,
+#pages section h2 {
+  padding: 3px 35px;
+  line-height: 1.4em;
+  text-align: justify;
+}
+
+/* line 87, ../sass/_layout.scss */
+#pages section h2 {
+  margin: 15px 0 10px;
+}
+
+/* line 91, ../sass/_layout.scss */
+#pageflip-canvas {
+  position: absolute;
+  z-index: 100;
+}
+
+/*BEGIN max and min width 992px*/
+/*BEGIN max and min width 940px*/
+/* Portrait tablet to landscape and desktop */
+@media (max-width: 768px) {
+  /* line 120, ../sass/_layout.scss */
+  .size2 {
+    width: 65%;
+  }
+}
+/*BEGIN max and min width 320px*/
+/* line 1, ../sass/_chat.scss */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* line 5, ../sass/_chat.scss */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  border-radius: 0px;
+  background-color: #aaa;
+}
+
+/* line 11, ../sass/_chat.scss */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 1px 1px 6px #333;
+  background-color: beige;
+}
+
+/* line 17, ../sass/_chat.scss */
+#data {
+  border: 2px solid gray;
+  border-radius: 10px 10px 0 0;
+  overflow-x: hidden;
+  display: block;
+  height: 450px;
+  font-size: 20px;
+  line-height: 1.5em;
+}
+/* line 27, ../sass/_chat.scss */
+#data li {
+  border: 1px solid yellowgreen;
+  background: lightblue;
+  border-radius: 8px;
+  border-right: 1px solid transparent;
+  width: 50%;
+  padding: 7px;
+  margin: 0 5px 5px 0;
+}
+/* line 37, ../sass/_chat.scss */
+#data .me {
+  text-align: right;
+  margin: 0 5px 5px 45%;
+}
+/* line 42, ../sass/_chat.scss */
+#data .guest {
+  text-align: left;
+  margin: 0 5px 5px 4%;
+}
+/* line 47, ../sass/_chat.scss */
+#data .arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 13px solid transparent;
+  border-left: 20px solid lightblue;
+  float: right;
+  margin: 11px 37px 0px 0px;
+  display: block;
+}
+/* line 58, ../sass/_chat.scss */
+#data .arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 13px solid transparent;
+  border-right: 20px solid lightblue;
+  float: left;
+  margin: 11px 37px 0px 26px;
+  display: block;
+}
+
+/* line 70, ../sass/_chat.scss */
+form#chat {
+  background: gray;
+  padding: 3px;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+}
+/* line 76, ../sass/_chat.scss */
+form#chat input {
+  border: 0;
+  padding: 10px;
+  width: 90%;
+  margin-right: .5%;
+  border-radius: 10px;
+}
+/* line 84, ../sass/_chat.scss */
+form#chat button {
+  width: 9%;
+  font-size: 9;
+  background: #82e0ff;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  border-right: 1px solid black;
+}
+
+/* line 94, ../sass/_chat.scss */
+.txtbox {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/*BEGIN max and min width 320px*/
+@media (max-width: 320px) {
+  /* line 102, ../sass/_chat.scss */
+  form#chat input {
+    width: 80%;
+  }
+  /* line 105, ../sass/_chat.scss */
+  form#chat button {
+    width: 19%;
+  }
+}
+/* keyframes for rotating animation */
+@-webkit-keyframes spin {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+/* scene wrapper */
+/* line 9, ../sass/_index.scss */
+.wrapper {
+  height: 300px;
+  margin-top: 50px;
+  position: relative;
+  perspective: 800;
+  perspective-origin: 50% 100px;
+}
+
+/* cube wrapper */
+/* line 18, ../sass/_index.scss */
+.cube {
+  position: relative;
+  margin: 0 auto;
+  width: 200px;
+  transform-style: preserve-3d;
+  animation: spin 10s infinite linear;
+  transition: all 1s linear;
+}
+
+/* outer cube */
+/* line 28, ../sass/_index.scss */
+.firstcube {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  display: block;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.2);
+  font: 20px/1 'Algerian';
+  font-weight: bold;
+  text-align: center;
+  line-height: 200px;
+  color: black;
+  text-transform: uppercase;
+  transition: all 1s linear;
+}
+
+/* line 45, ../sass/_index.scss */
+.back {
+  transform: translateZ(-100px) rotateY(180deg);
+}
+
+/* line 48, ../sass/_index.scss */
+.right {
+  transform: rotateY(-270deg) translateX(100px);
+  transform-origin: top right;
+}
+
+/* line 52, ../sass/_index.scss */
+.left {
+  transform: rotateY(270deg) translateX(-100px);
+  transform-origin: center left;
+}
+
+/* line 56, ../sass/_index.scss */
+.top {
+  transform: rotateX(-90deg) translateY(-100px);
+  transform-origin: top center;
+}
+
+/* line 60, ../sass/_index.scss */
+.bottom {
+  transform: rotateX(90deg) translateY(100px);
+  transform-origin: bottom center;
+}
+
+/* line 64, ../sass/_index.scss */
+.front {
+  transform: translateZ(100px);
+}
+
+/* line 69, ../sass/_index.scss */
+.scene {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 50px;
+  perspective: 400;
+}
+
+/* line 77, ../sass/_index.scss */
+.cube2 {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  animation: example 10s infinite linear;
+  top: 65px;
+}
+
+/* line 88, ../sass/_index.scss */
+.secondcube {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  border: 2px solid #9aa;
+  background-color: rgba(32, 170, 151, 0.5);
+  font: 13px/1 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  color: #fff;
+  line-height: 40px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* line 103, ../sass/_index.scss */
+.back2 {
+  transform: translateZ(-25px);
+  background-color: rgba(105, 136, 190, 0.5);
+}
+
+/* line 107, ../sass/_index.scss */
+.top2 {
+  transform: translateY(-25px) rotateX(90deg);
+}
+
+/* line 110, ../sass/_index.scss */
+.bottom2 {
+  transform: translateY(25px) rotateX(90deg);
+}
+
+/* line 114, ../sass/_index.scss */
+.front2 {
+  transform: translateZ(25px);
+  background-color: rgba(105, 136, 190, 0.5);
+}
+
+/* line 118, ../sass/_index.scss */
+.top2, .bottom2 {
+  background-color: rgba(105, 136, 190, 0.5);
+}
+
+/* line 122, ../sass/_index.scss */
+.left2 {
+  transform: rotateY(270deg) translateX(-25px);
+  transform-origin: center left;
+}
+
+/* line 127, ../sass/_index.scss */
+.right2 {
+  transform: rotateY(270deg) translateX(25px);
+  transform-origin: center right;
+}
+
+@keyframes example {
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+/* line 5, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}

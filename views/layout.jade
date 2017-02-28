@@ -1,0 +1,64 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		title= title
+		meta(content='width=device-width, initial-scale=1.0', name='viewport')
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+		link(rel='stylesheet', href='/stylesheets/screen.css' media='screen' type='text/css')
+		link(rel='stylesheet', href='/stylesheets/print.css' media='print, projection' type='text/css')
+		link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', charset='utf-8')
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+		script(src='https://cdn.socket.io/socket.io-1.2.0.js')
+		script(src='https://code.jquery.com/jquery-1.11.1.js')
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+		script(src='javascripts/pageflip.js')
+
+	body
+
+		nav.navbar.navbar-inverse(role='navigation')
+			.container
+				.navbar-header
+					button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand(href='/')
+						img.size1(src='/images/begining.png', alt='')
+			
+				#bs-example-navbar-collapse-1.collapse.navbar-collapse
+					ul.nav.navbar-nav
+						li
+							a(href='/') Home
+						li
+							a(href='/login') Join chat
+						li
+							a(href='/userlist') Admin
+						li.dropdown
+							a.dropdown-toggle(href='#', data-toggle='dropdown') Link 
+								b.caret
+							ul.dropdown-menu
+								li
+									a(href='https://www.facebook.com/reynan.e.bautista') Facebook
+								li
+									a(href='http://resume-enpowered.rhcloud.com/') Openshift Resume
+								li
+									a(href='https://github.com/reynan2k13') Github	
+		block content
+
+		//footer.navbar-fixed-bottom
+		//	.col-lg-12.col-sm-12.text-right
+		//		p Share!
+		//			a(href='https://www.facebook.com/dialog/share?app_id=145634995501895&href=https://resume-rey.herokuapp.com//&title=Test', target='_blank')
+		//				i.fa.fa-2x.fa-facebook-official                         
+		//			a(href='https://twitter.com/home?status=http%3A//resume-rey.herokuapp.com/')
+		//				i.fa.fa-2x.fa-twitter-square
+		//			a
+		//				i.fa.fa-2x.fa-linkedin-square 
+		//			a
+		//				i.fa.fa-2x.fa-dribbble
+		//			a
+		//				i.fa.fa-2x.fa-rss
+
+

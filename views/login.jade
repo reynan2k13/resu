@@ -1,0 +1,45 @@
+extends layout
+
+block content
+
+	.container.text-center
+		.br2x
+		p Join Chat!
+		form#formLoginUser(name="loginuser",method="post",action="/chat")
+			input#inputUserName(type="text", placeholder="username", name="username")
+			br
+			input#inputUserPassword(type="password", placeholder="password", name="userpassword")
+			br
+			br
+			button#btnSubmit(type="submit" class="btn btn-primary") login
+		.br2x
+		a(class="btn btn-primary" href="/adduser") Create account	 
+	script.
+
+	//input#inputUserName(type="text", placeholder="username", name="username")
+	//input#inputUserPassword(type="password", placeholder="password", name="userpassword")
+	//button#btnSubmit submit
+
+	//script.
+		document.getElementById('btnSubmit').addEventListener("click" , function(){
+		
+			var data = {};
+			data.username = $('#inputUserName').val();
+			data.userpassword = $('#inputUserPassword').val();
+			$.ajax({
+					type: 'POST',
+					url: 'http://localhost:3000/loginuser',
+					data: JSON.stringify(data),
+					contentType: 'application/json',
+					success: function(data) {
+						console.log(data);
+						if (data == "success"){
+							alert("success");
+							window.location.href = "/chat";
+						}else{
+							alert("error");
+						}
+					}
+			});
+		})
+	//

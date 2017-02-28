@@ -1,0 +1,43 @@
+extends layout
+
+block content
+  .text-center
+    p#enan
+  .container#data
+      ul#messages
+    .container.txtbox    
+      form#chat(action='')
+        input#m(autocomplete='off')
+        button#sendmsg Send
+    script.
+      
+      var socket = io();
+      var username = "#{username}";
+ 
+      $('form').submit(function(){
+      socket.emit('username', username);  
+      socket.emit('chat message',$('#m').val());
+      $('#m').val('');
+      return false;
+      });
+
+      var abc = socket.on('username', function(username){
+        abc = username;
+      });
+
+      socket.on('chat message', function(msg){
+      if(abc == username){
+        $('#messages').append($('<div class="arrow-right">')).append($('<li class="me">').text(msg));
+        }
+      else{
+        $('#messages').append($('<div class="arrow-left">')).append($('<li class="guest">').text(abc + ":" +msg));
+      }
+      var elem = document.getElementById('data');
+      elem.scrollTop = elem.scrollHeight;
+      });
+
+      socket.on('count', function (count) {
+        var text = (count.count)
+        document.getElementById("enan").innerHTML = "number of users: " + text;
+        console.log(text);
+      })

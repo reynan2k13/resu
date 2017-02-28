@@ -1,0 +1,137 @@
+
+/* keyframes for rotating animation */
+@-webkit-keyframes spin {
+  from { transform: rotateY(0); }
+  to   { transform: rotateY(360deg); }
+}
+
+/* scene wrapper */
+.wrapper{
+  height: 300px;
+  margin-top:50px;
+  position:relative;
+  perspective: 800;
+  perspective-origin: 50% 100px;
+}
+
+/* cube wrapper */
+.cube{
+  position: relative;
+  margin: 0 auto;
+  width: 200px;
+  transform-style: preserve-3d;
+  animation: spin 10s infinite linear;
+  transition: all 1s linear;
+}
+
+/* outer cube */
+.firstcube{
+  position:absolute;
+  width:200px;
+  height:200px;
+  display:block;
+  background:rgba(255,255,255,0.1);
+  box-shadow:inset 0 0 30px rgba(0,0,0,0.2);
+  font: 20px/1 'Algerian';
+  font-weight: bold;
+  text-align:center;
+  line-height:200px;
+  color: black;
+  text-transform:uppercase;
+  transition: all 1s linear;
+
+}
+
+.back{
+  transform: translateZ(-100px) rotateY(180deg);
+}
+.right{
+  transform:rotateY(-270deg) translateX(100px);
+  transform-origin: top right;
+}
+.left{
+  transform:rotateY(270deg) translateX(-100px);
+  transform-origin: center left;
+}
+.top{
+  transform:rotateX(-90deg) translateY(-100px);
+  transform-origin: top center;
+}
+.bottom{
+  transform:rotateX(90deg) translateY(100px);
+  transform-origin: bottom center;
+}
+.front{
+  transform: translateZ(100px);
+}
+
+
+.scene {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 50px;
+  perspective: 400;
+}
+
+.cube2 {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  animation: example 10s infinite linear;
+  //perspective: 225px;
+  top: 65px;
+}
+
+.secondcube {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  border: 2px solid #9aa;
+  background-color: rgba(32, 170, 151, 0.5);
+  font: 13px/1 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  color: #fff;
+  line-height: 40px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.back2 {
+  transform: translateZ(-25px);
+  background-color: rgba(105, 136, 190, 0.5)
+}
+.top2 {
+  transform: translateY(-25px) rotateX(90deg);
+}
+.bottom2 {
+  transform: translateY(25px) rotateX(90deg);
+
+}
+.front2 {
+  transform: translateZ(25px);
+  background-color: rgba(105, 136, 190, 0.5)
+}
+.top2, .bottom2 {
+  background-color: rgba(105, 136, 190, 0.5)
+}
+
+.left2{
+  transform:rotateY(270deg) translateX(-25px);
+  transform-origin: center left;
+}
+
+.right2{
+  transform:rotateY(270deg) translateX(25px);
+  transform-origin: center right;
+}
+
+@keyframes example {
+  100% { transform: rotateX(360deg); }
+}
+
+
+

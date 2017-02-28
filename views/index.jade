@@ -1,0 +1,74 @@
+extends layout
+
+block content
+
+	.container.text-center
+		.br2x
+		.wrapper
+			.cube
+				.firstcube.front Reynan Bautista
+				.firstcube.back Web Developer
+				.firstcube.top 
+				.firstcube.bottom 
+				.firstcube.left
+				.firstcube.right 
+				.cube2
+					.secondcube.back2 JAVA
+					.secondcube.top2 NodeJS
+					.secondcube.bottom2 NodeJS
+					.secondcube.front2 JAVA
+					.secondcube.left2 left
+					.secondcube.right2 right
+		.br2x
+	//	#book
+	//		canvas#pageflip-canvas
+	//		ena#pages
+	//			section
+	//				p test
+	//			section
+	//				p test1
+	//			section
+	//				p test2
+	//			section
+	//				p test4
+	//	script(src='javascripts/pageflip.js')			
+	//	form#formLoginUser(name="loginuser",method="post",action="/loginuser")
+	//		input#inputUserName(type="text", placeholder="username", name="username")
+	//		br
+	//		input#inputUserPassword(type="password", placeholder="password", name="userpassword")
+	//		br
+	//		br
+	//		button#btnSubmit(type="submit" class="btn btn-primary") login
+	//	.br2x
+	//	a(class="btn btn-primary" href="/adduser") Create account	 
+	//script.
+
+	//input#inputUserName(type="text", placeholder="username", name="username")
+	//input#inputUserPassword(type="password", placeholder="password", name="userpassword")
+	//button#btnSubmit submit
+
+	//script.
+		document.getElementById('btnSubmit').addEventListener("click" , function(){
+		
+			var data = {};
+			data.username = $('#inputUserName').val();
+			data.userpassword = $('#inputUserPassword').val();
+			$.ajax({
+					type: 'POST',
+					url: 'http://localhost:3000/loginuser',
+					data: JSON.stringify(data),
+					contentType: 'application/json',
+					success: function(data) {
+						console.log(data);
+						if (data == "success"){
+							alert("success");
+							window.location.href = "/chat";
+						}else{
+							alert("error");
+						}
+					}
+			});
+		})
+	//
+	script.
+		
